@@ -42,3 +42,37 @@ python manage.py migrate
 
 # Start server
 python manage.py runserver
+```
+
+## 📁 Related Problem Set
+See problems.md for the complete set of backend tasks and their solution links.
+
+---
+
+### 1. 🔐 Caesar Cipher – Encoding & Decoding  
+🔗 [GitHub Repo](https://github.com/lathees-dev/Caesar-Cipher)
+
+Encrypt and decrypt text using Caesar Cipher with dynamic shift support.
+
+---
+
+### 2. 💰 Indian Currency Formatter  
+🔗 [GitHub Repo](https://github.com/lathees-dev/INR-Formatter)
+
+Convert float numbers to Indian currency format (e.g., `12,34,567.89`).
+
+---
+
+### 3. 🧬 Merging Overlapping Lists  
+🔗 [GitHub Repo](https://github.com/lathees-dev/Merge-List)
+
+Combine two custom-formatted lists based on majority containment and index alignment.
+
+---
+
+### 4. 📉 Minimizing Financial Loss  
+🔗 [GitHub Repo](https://github.com/lathees-dev/Minimize-Loss)
+
+Given house prices, calculate the minimum financial loss by choosing buy-sell positions with guaranteed loss.
+
+---

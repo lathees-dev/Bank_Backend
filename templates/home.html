@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bank Loan API</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        padding: 2rem;
+        background: #f9f9f9;
+        color: #333;
+      }
+      h1 {
+        color: #2e8b57;
+      }
+      code,
+      pre {
+        background: #eee;
+        padding: 6px 10px;
+        border-radius: 5px;
+        display: block;
+        margin: 8px 0;
+        font-size: 0.95rem;
+      }
+      ul {
+        padding-left: 1.2rem;
+      }
+      li {
+        margin-bottom: 0.6rem;
+      }
+      .section {
+        margin-bottom: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>💸 Bank Loan Management API</h1>
+    <p>
+      This Django REST API manages customers, loan issuance, EMI calculation,
+      and payment tracking.
+    </p>
+
+    <div class="section">
+      <h3>🔗 Available Endpoints:</h3>
+      <ul>
+        <li><code>POST /api/customers/</code> – Create customer</li>
+        <li><code>POST /api/loans/</code> – Issue new loan</li>
+        <li>
+          <code>POST /api/loans/&lt;loan_id&gt;/payments/</code> – Record loan
+          payment
+        </li>
+        <li>
+          <code>GET /api/loans/&lt;loan_id&gt;/ledger/</code> – View full ledger
+        </li>
+        <li>
+          <code>GET /api/customers/&lt;customer_id&gt;/overview/</code> – View
+          all loans for a customer
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📬 How to Use:</h3>
+      <p>
+        Use Postman or cURL to test each endpoint with JSON requests. Make sure
+        to replace IDs with actual UUIDs.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>📥 Sample Input Payloads:</h3>
+
+      <b>1. Create Customer:</b>
+      <pre>
+{
+    "name": "Ravi Kumar",
+    "email": "ravi@example.com"
+}</pre
+      >
+
+      <b>2. Issue Loan:</b>
+      <pre>
+{
+    "customer_id": "123e4567-e89b-12d3-a456-426614174000",
+    "loan_amount": 50000,
+    "interest_rate_yearly": 10.5,
+    "loan_period_years": 12
+}</pre
+      >
+
+      <b>3. Make Payment:</b>
+      <pre>
+{
+    "amount": 5000,
+    "date": "2025-07-25"
+}</pre
+      >
+    </div>
+
+    <div class="section">
+      <h3>🧪 Dummy Test IDs:</h3>
+      <p>
+        Use these UUIDs while testing until real customers and loans are
+        created:
+      </p>
+      <ul>
+        <li>
+          <b>Customer ID:</b> <code>85cc35fc-7ec2-408b-b997-33da2a640d49</code>
+        </li>
+        <li>
+          <b>Loan ID:</b> <code>1a35899d-4688-46ec-af3c-c3ee4e388fe1</code>
+        </li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h3>📎 Notes:</h3>
+      <ul>
+        <li>All requests and responses are in JSON.</li>
+        <li>UUIDs must be valid and exist in the database.</li>
+        <li>Dates must be in <code>YYYY-MM-DD</code> format.</li>
+      </ul>
+    </div>
+  </body>
+</html>

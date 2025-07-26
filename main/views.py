@@ -3,7 +3,7 @@ from rest_framework.response import Response
 from rest_framework import status, generics
 from rest_framework.exceptions import NotFound
 from .serializers import *
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from .models import Loan, Customer, Payment
 
 
@@ -43,7 +43,6 @@ class LoanDetailView(APIView):
                 "loan_id": str(loan.loan_id),
                 "customer_name": loan.customer.name,
                 "customer_email": loan.customer.email,
-                "customer_address": loan.customer.address,
                 "loan_amount": float(loan.principal_amount),
                 "interest_rate": float(loan.interest_rate),
                 "loan_period_years": loan.loan_period_years,
@@ -106,3 +105,7 @@ class CustomerLoanOverviewAPIView(APIView):
             {"customer_id": str(customer.customer_id), "loans": loans}
         )
         return Response(serializer.data)
+
+# Home view to render the main page
+def home(request):
+    return render(request, "home.html")
